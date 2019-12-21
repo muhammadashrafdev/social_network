@@ -123,3 +123,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# load static files
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+
+AUTH_USER_MODEL = 'social_app.User'
+
+# Page to go after successfull login
+LOGIN_REDIRECT_URL = 'well_come_dashboard'
+
+LOGOUT_REDIRECT_URL = 'home'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
